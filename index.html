@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <title>Document</title>
+    <title>Quantum Academy - fun to learn</title>
   </head>
   <body>
     <nav>
@@ -180,5 +180,22 @@
             <p>Copyright &amp; 2020-2021 <span>Zeus Systems Pvt. Ltd.</span> All rights reserved</p>
         </footer>
     </div>
+    <script>
+      var header = document.querySelector(".main-heading");
+      var btns = header.getElementsByClassName("main-heading-content");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          var current = document.getElementsByClassName(
+            "main-heading-content-active"
+          );
+          current[0].className = current[0].className.replace(
+            " main-heading-content-active",
+            ""
+          );
+          this.className += " main-heading-content-active";
+        });
+      }
+
+    </script>
   </body>
 </html>

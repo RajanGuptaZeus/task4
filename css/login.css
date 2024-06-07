@@ -39,7 +39,6 @@ nav{
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 93vh;
 }
 form {
     border-top: 5px solid #4FC1E6;
@@ -88,6 +87,8 @@ form {
     outline: none;
     border-bottom: 1px solid #929292;
     font-size: 1rem;
+    background: transparent url(../assets/icons/arrow-down.svg) no-repeat top right;
+    appearance: none
 }
 .input > input{
     margin-top: 30px;
@@ -163,16 +164,23 @@ button {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     cursor: pointer;
 }
+button a{
+    text-decoration: none;
+    color: #000;
+    outline: none;
+}
 .footer-section {
-    position: fixed;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 210px;
 }
 .footer-links{
     margin: 20px 0;
+}
+.footer-links > a{
+    text-decoration: none;
 }
 .footer-upper-section {
     color: #1F7A54;
@@ -182,7 +190,7 @@ button {
 footer{
     display: flex;
     background: #E0E1E1;
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     justify-content: center;
     align-items: center;

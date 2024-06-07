@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
-    <title>Document</title>
+    <title>Login - Join Quantum</title>
 </head>
 <body>
     <nav>
@@ -16,9 +16,9 @@
             <img src="./assets/icons/back.svg" alt="">
             <p>Log in with Quantum</p>
         </div>
-        <div class="options">
-            <input type="radio" name="login" id="district">
-            <label for="district">District</label>
+        <div class="options" >
+            <input type="radio" name="login" id="districtCheck" checked>
+            <label for="districtCheck">District</label>
             <input type="radio" name="login" id="independent-school">
             <label for="independent-school">Independent School</label>
         </div>
@@ -36,8 +36,8 @@
             <input type="text" placeholder="Username/Email ID*">
             <p>FORGOT USERNAME</p>
             <div class="password">
-                <input type="password" placeholder="Password*">
-                <span><img src="./assets/icons/preview.svg" alt=""></span>
+                <input type="password" placeholder="Password*" id="pass">
+                <span onclick="toggleShowPassword()"><img src="./assets/icons/preview.svg" alt="" ></span>
             </div>
             <p>FORGOT PASSWORD</p>
         </div>
@@ -45,20 +45,27 @@
             <input type="checkbox" name="remember" id="remember">
             <label for="remember">Remember me</label><br>
         </div>
-        <button type="submit">LOG IN</button>
+        <button type="submit"><a href="./index.html">LOG IN</a></button>
     </form>
-    <div class="footer-section">
-        <div class="footer-links">
-          <a href="#" class="footer-upper-section">ABOUT</a>
-          <span class="footer-upper-section">|</span>
-          <a href="#" class="footer-upper-section">CONTACT US</a>
+    </div>
+        <div class="footer-section">
+            <div class="footer-links">
+              <a href="#" class="footer-upper-section">ABOUT</a>
+              <span class="footer-upper-section">|</span>
+              <a href="#" class="footer-upper-section">CONTACT US</a>
+            </div>
+            <footer>
+                <img src="./assets/icons/logo used in footer.svg" alt="">
+                <hr>
+                <p>Copyright &amp; 2020-2021 <span>Zeus Systems Pvt. Ltd.</span> All rights reserved</p>
+            </footer>
         </div>
-        <footer>
-            <img src="./assets/icons/logo used in footer.svg" alt="">
-            <hr>
-            <p>Copyright &amp; 2020-2021 <span>Zeus Systems Pvt. Ltd.</span> All rights reserved</p>
-        </footer>
-    </div>
-    </div>
+    <script>
+        const toggleShowPassword = () => {
+            const passwordInput = document.getElementById('pass');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        }
+    </script>
 </body>
 </html>
