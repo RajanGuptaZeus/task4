@@ -171,6 +171,9 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+.footer-links{
+    margin: 20px 0;
+}
 .footer-upper-section {
     color: #1F7A54;
     font-size: small;
